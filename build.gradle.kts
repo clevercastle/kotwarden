@@ -24,10 +24,10 @@ java {
     }
 }
 
-group = "com.ivyxjc"
+group = "org.clevercastle"
 version = "0.0.1"
 application {
-    mainClass.set("com.ivyxjc.ApplicationKt")
+    mainClass.set("org.clevercastle.ApplicationKt")
 
     val isDevelopment: Boolean = project.ext.has("development")
     applicationDefaultJvmArgs = listOf("-Dio.ktor.development=$isDevelopment")
