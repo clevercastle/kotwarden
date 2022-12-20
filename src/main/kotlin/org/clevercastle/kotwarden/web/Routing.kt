@@ -81,10 +81,16 @@ fun Routing.twofa(twoFactorController: TwoFactorController) {
     }
 }
 
-fun Routing.identity(identityController: IdentityController) {
+fun Routing.identity(
+    identityController: IdentityController,
+    accountController: AccountController
+) {
     route("identity") {
         post("connect/token") {
             identityController.login(this.context)
+        }
+        post("accounts/prelogin") {
+            accountController.preLogin(this.context)
         }
     }
 }
